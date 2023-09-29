@@ -1,14 +1,14 @@
 body{
     margin-top: 0;
     max-width: 960px;
-    max-height: 960px;
+	margin-block: 0;
     margin-inline: auto;
     
 }
 
-.title > p{
+marquee{
     font-size: 2vw; 
-    text-align: center; 
+    
     margin-top: -10px;
 } 
 
@@ -21,8 +21,7 @@ body{
 .sidebar{
     float: left;
     width: 20%;
-    height: 100%;
-    min-height: 700px;
+    min-height: inherit;
     background-image: url("background.png");
     
 }
@@ -33,16 +32,20 @@ body{
 }
 
 .sidebar ul a {
-    
     margin-left: -1rem;
 }
 .sidebar h2{
     padding-left: 0.4rem;
     margin-block: 0;
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  67% { color: yellow }
 }
 
 .main{
-    min-height: 700px;
+    min-height: 1100px;
     background-color: #6699FF;
 }
 table{
@@ -51,6 +54,12 @@ table{
 }
 .img-table, .img-table th, .img-table td{
     border: 2px dashed black;
+}
+
+td img{
+	margin-top: -2rem;
+	width: 200px;
+	height: 200px;
 }
 
 footer{
